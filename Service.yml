@@ -13,3 +13,5 @@ spec:
   selector:
     app: monapp                    
   type: LoadBalancer                   
+  externalIPs:
+    - 139.177.204.227
