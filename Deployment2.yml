@@ -14,13 +14,13 @@ spec:
         labels:
           app: monapp
       spec:
-       containers:
-        - name: monapp
-          image: fyfytamft/pipeline-kube
-          ports:
-          - containerPort: 80
-          imagePullSecrets:
-          - name: registry-secret       
+        containers:
+          - name: monapp
+            image: fyfytamft/pipeline-kube
+            ports:
+            - containerPort: 80
+        imagePullSecrets:
+        - name: registry-secret     
 ---
 apiVersion: v1
 kind: Service
