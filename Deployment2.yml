@@ -42,6 +42,11 @@ kind: Ingress
 metadata:
   name: monapp-ingress
   namespace: default
+  labels:
+    app: monapp
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
 
 spec:
   ingressClassName: nginx
