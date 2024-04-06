@@ -12,4 +12,6 @@ spec:
       nodePort: 31200
   selector:
     app: monapp                    
-  type: LoadBalancer                 
+  type: LoadBalancer
+  externalIPs:
+    - 173.230.130.238                 
