@@ -19,8 +19,8 @@ spec:
           image: fyfytamft/pipeline-kube
           ports:
           - containerPort: 80
-        imagePullSecrets:
-        - name: registry-secret       
+          imagePullSecrets:
+          - name: registry-secret       
 ---
 apiVersion: v1
 kind: Service
