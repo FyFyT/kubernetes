@@ -1,10 +1,13 @@
-# Utiliser une image légère d'nginx
+# Utiliser l'image officielle légère d'nginx
 FROM nginx:alpine
 
+# Définir le répertoire de travail dans le conteneur
+WORKDIR /usr/share/nginx/html
+
 # Copier les fichiers de l'application dans le répertoire de travail de Nginx
-COPY ./index.html /usr/share/nginx/html
-COPY ./style.css /usr/share/nginx/html
-COPY ./script.js /usr/share/nginx/html
+COPY index.html .
+COPY style.css .
+COPY script.js .
 
 # Exposer le port 80 pour accéder à l'application depuis l'extérieur du conteneur
 EXPOSE 80
