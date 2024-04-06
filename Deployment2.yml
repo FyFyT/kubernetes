@@ -30,8 +30,8 @@ spec:
   selector:
     app: monapp
   ports:
-    - port: 80
-      protocol: TCP
+    - protocol: TCP
+      port: 80
       targetPort: 80
       
   type: ClusterIP
@@ -41,12 +41,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: monapp-ingress
-  labels:
-    app: monapp
   namespace: default
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
-    nginx.ingress.kubernetes.io/use-forwarded-headers: "true"
 
 spec:
   ingressClassName: nginx
@@ -58,7 +53,7 @@ spec:
   - host: tongasoakubernetes.ddns.net
     http:
       paths:
-      - path: "/(.*)"
+      - path: /
         pathType: Prefix
         backend:
           service:
