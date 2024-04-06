@@ -6,5 +6,5 @@
      - name: delete old service
        command: kubectl delete -f /root/Service2.yml
      - name: create new deployment
-       command: kubectl apply -f /root/Deployment.yml
+       command: kubectl apply -f /root/Deployment2.yml
 
