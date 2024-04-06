@@ -5,7 +5,7 @@ metadata:
    labels:
      app: monapp
 spec:
-   replicas: 2
+   replicas: 1
    selector:      # tells the controller which pods to watch/belong to
     matchLabels:
      app: monapp

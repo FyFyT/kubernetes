@@ -1,6 +1,8 @@
 - hosts: all
   become: true
   tasks: 
+     - name: delete old deployment
+       command: kubectl delete -f /root/Deployment2.yml
      - name: create new deployment
        command: kubectl apply -f /root/Deployment2.yml
 
