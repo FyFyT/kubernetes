@@ -16,7 +16,7 @@ spec:
       spec:
         containers:
           - name: monapp
-            image: fyfytamft/pipeline-kube
+            image: fyfytamft/pipeline-kube:v1.56
             ports:
             - containerPort: 80
         imagePullSecrets:
